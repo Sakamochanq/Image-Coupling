@@ -299,5 +299,13 @@ namespace Image_Coupling
             //アプリの再起動
             Application.Restart();
         }
+
+        private void RunExtractor_Click(object sender, EventArgs e)
+        {
+            using(var extractor = new Plugins.Extrctor())
+            {
+                extractor.ShowDialog();
+            }
+        }
     }
 }

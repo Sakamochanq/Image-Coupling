@@ -38,6 +38,8 @@
             this.ExitButton = new System.Windows.Forms.ToolStripMenuItem();
             this.表示VToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.IsTopMostCheckBox = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
+            this.ReStartButton = new System.Windows.Forms.ToolStripMenuItem();
             this.ヘルプHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OpenHelpButton = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -50,8 +52,8 @@
             this.ConvertAsButton = new System.Windows.Forms.Button();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.TruePageCheckBox = new System.Windows.Forms.CheckBox();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
-            this.ReStartButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.RunExtractor = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImagePreviewBox)).BeginInit();
@@ -64,11 +66,12 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ファイルFToolStripMenuItem,
             this.表示VToolStripMenuItem,
+            this.toolStripMenuItem4,
             this.ヘルプHToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(679, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(679, 26);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -81,7 +84,7 @@
             this.toolStripMenuItem2,
             this.ExitButton});
             this.ファイルFToolStripMenuItem.Name = "ファイルFToolStripMenuItem";
-            this.ファイルFToolStripMenuItem.Size = new System.Drawing.Size(80, 21);
+            this.ファイルFToolStripMenuItem.Size = new System.Drawing.Size(85, 22);
             this.ファイルFToolStripMenuItem.Text = "ファイル(F)";
             // 
             // OpenFolderBrowseButton
@@ -89,14 +92,14 @@
             this.OpenFolderBrowseButton.Image = ((System.Drawing.Image)(resources.GetObject("OpenFolderBrowseButton.Image")));
             this.OpenFolderBrowseButton.Name = "OpenFolderBrowseButton";
             this.OpenFolderBrowseButton.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.OpenFolderBrowseButton.Size = new System.Drawing.Size(197, 22);
+            this.OpenFolderBrowseButton.Size = new System.Drawing.Size(208, 22);
             this.OpenFolderBrowseButton.Text = "開く";
             this.OpenFolderBrowseButton.Click += new System.EventHandler(this.OpenFolderBrowseButton_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(194, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(205, 6);
             // 
             // ConvertImageButton
             // 
@@ -104,20 +107,20 @@
             this.ConvertImageButton.Name = "ConvertImageButton";
             this.ConvertImageButton.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.S)));
-            this.ConvertImageButton.Size = new System.Drawing.Size(197, 22);
+            this.ConvertImageButton.Size = new System.Drawing.Size(208, 22);
             this.ConvertImageButton.Text = "変換保存";
             this.ConvertImageButton.Click += new System.EventHandler(this.ConvertImageButton_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(194, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(205, 6);
             // 
             // ExitButton
             // 
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.ExitButton.Size = new System.Drawing.Size(197, 22);
+            this.ExitButton.Size = new System.Drawing.Size(208, 22);
             this.ExitButton.Text = "終了";
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
@@ -128,7 +131,7 @@
             this.toolStripMenuItem3,
             this.ReStartButton});
             this.表示VToolStripMenuItem.Name = "表示VToolStripMenuItem";
-            this.表示VToolStripMenuItem.Size = new System.Drawing.Size(60, 21);
+            this.表示VToolStripMenuItem.Size = new System.Drawing.Size(62, 22);
             this.表示VToolStripMenuItem.Text = "表示(V)";
             // 
             // IsTopMostCheckBox
@@ -137,16 +140,31 @@
             this.IsTopMostCheckBox.Name = "IsTopMostCheckBox";
             this.IsTopMostCheckBox.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.T)));
-            this.IsTopMostCheckBox.Size = new System.Drawing.Size(197, 22);
+            this.IsTopMostCheckBox.Size = new System.Drawing.Size(209, 22);
             this.IsTopMostCheckBox.Text = "最前面表示";
             this.IsTopMostCheckBox.CheckedChanged += new System.EventHandler(this.IsTopMostCheckBox_CheckedChanged);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(206, 6);
+            // 
+            // ReStartButton
+            // 
+            this.ReStartButton.Image = ((System.Drawing.Image)(resources.GetObject("ReStartButton.Image")));
+            this.ReStartButton.Name = "ReStartButton";
+            this.ReStartButton.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.R)));
+            this.ReStartButton.Size = new System.Drawing.Size(209, 22);
+            this.ReStartButton.Text = "再起動";
+            this.ReStartButton.Click += new System.EventHandler(this.ReStartButton_Click);
             // 
             // ヘルプHToolStripMenuItem
             // 
             this.ヘルプHToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.OpenHelpButton});
             this.ヘルプHToolStripMenuItem.Name = "ヘルプHToolStripMenuItem";
-            this.ヘルプHToolStripMenuItem.Size = new System.Drawing.Size(71, 21);
+            this.ヘルプHToolStripMenuItem.Size = new System.Drawing.Size(75, 22);
             this.ヘルプHToolStripMenuItem.Text = "ヘルプ(H)";
             // 
             // OpenHelpButton
@@ -155,7 +173,7 @@
             this.OpenHelpButton.Name = "OpenHelpButton";
             this.OpenHelpButton.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.H)));
-            this.OpenHelpButton.Size = new System.Drawing.Size(209, 22);
+            this.OpenHelpButton.Size = new System.Drawing.Size(222, 22);
             this.OpenHelpButton.Text = "ヘルプを表示";
             this.OpenHelpButton.Click += new System.EventHandler(this.OpenHelpButton_Click);
             // 
@@ -248,20 +266,22 @@
             this.TruePageCheckBox.Text = "ページ数の描画";
             this.TruePageCheckBox.UseVisualStyleBackColor = true;
             // 
-            // toolStripMenuItem3
+            // toolStripMenuItem4
             // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(194, 6);
+            this.toolStripMenuItem4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RunExtractor});
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(88, 22);
+            this.toolStripMenuItem4.Text = "ツール（T）";
             // 
-            // ReStartButton
+            // RunExtractor
             // 
-            this.ReStartButton.Image = ((System.Drawing.Image)(resources.GetObject("ReStartButton.Image")));
-            this.ReStartButton.Name = "ReStartButton";
-            this.ReStartButton.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.R)));
-            this.ReStartButton.Size = new System.Drawing.Size(197, 22);
-            this.ReStartButton.Text = "再起動";
-            this.ReStartButton.Click += new System.EventHandler(this.ReStartButton_Click);
+            this.RunExtractor.Name = "RunExtractor";
+            this.RunExtractor.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.E)));
+            this.RunExtractor.Size = new System.Drawing.Size(230, 22);
+            this.RunExtractor.Text = "PDF画像抽出";
+            this.RunExtractor.Click += new System.EventHandler(this.RunExtractor_Click);
             // 
             // Source
             // 
@@ -316,6 +336,8 @@
         private System.Windows.Forms.CheckBox TruePageCheckBox;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem ReStartButton;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem RunExtractor;
     }
 }
 
