@@ -10,6 +10,10 @@ namespace Image_Coupling.Plugins
         public Extrctor()
         {
             InitializeComponent();
+
+            this.DPISelectBox.Items.Add("100");
+            this.DPISelectBox.Items.Add("300");
+            this.DPISelectBox.SelectedIndex = 0;
         }
 
         public void Extract(string pdfPath, string outputDir, int dpiX, int dpiY)
@@ -34,14 +38,19 @@ namespace Image_Coupling.Plugins
             }
         }
 
-        private int DPI_X = 100;
-        private int DPI_Y = 100;
-
         private void ExtractButton_Click(object sender, EventArgs e)
         {
             try
             {
-                Extract(TargetBox.Text, OutputBox.Text, DPI_X, DPI_Y);
+                switch (DPISelectBox.SelectedIndex)
+                {
+                    case 0:
+                        Extract(TargetBox.Text, OutputBox.Text, 100, 100);
+                        break;
+                    case 1:
+                        Extract(TargetBox.Text, OutputBox.Text, 300, 300);
+                        break;
+                }
             }
             catch (Exception ex)
             {

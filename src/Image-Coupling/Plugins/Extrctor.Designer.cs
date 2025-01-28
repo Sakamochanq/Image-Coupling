@@ -38,6 +38,8 @@
             this.ExitButton = new System.Windows.Forms.ToolStripMenuItem();
             this.ヘルプHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OpenHelpButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.画像DPIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DPISelectBox = new System.Windows.Forms.ToolStripComboBox();
             this.TargetBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,7 +55,8 @@
             this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ファイルFToolStripMenuItem,
-            this.ヘルプHToolStripMenuItem});
+            this.ヘルプHToolStripMenuItem,
+            this.画像DPIDToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -124,6 +127,22 @@
             | System.Windows.Forms.Keys.H)));
             this.OpenHelpButton.Size = new System.Drawing.Size(222, 22);
             this.OpenHelpButton.Text = "ヘルプを表示";
+            // 
+            // 画像DPIDToolStripMenuItem
+            // 
+            this.画像DPIDToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.DPISelectBox});
+            this.画像DPIDToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("画像DPIDToolStripMenuItem.Image")));
+            this.画像DPIDToolStripMenuItem.Name = "画像DPIDToolStripMenuItem";
+            this.画像DPIDToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.画像DPIDToolStripMenuItem.Text = "画像DPI（&D）";
+            // 
+            // DPISelectBox
+            // 
+            this.DPISelectBox.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.DPISelectBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DPISelectBox.Name = "DPISelectBox";
+            this.DPISelectBox.Size = new System.Drawing.Size(121, 26);
             // 
             // TargetBox
             // 
@@ -227,5 +246,7 @@
         private System.Windows.Forms.ToolStripMenuItem SelectFolderButton;
         private System.Windows.Forms.CheckBox AutoCheckBox;
         private System.Windows.Forms.Button ExtractButton;
+        private System.Windows.Forms.ToolStripMenuItem 画像DPIDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripComboBox DPISelectBox;
     }
 }
