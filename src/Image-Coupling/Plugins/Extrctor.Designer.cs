@@ -78,33 +78,35 @@
             this.OpenPDFButton.Image = ((System.Drawing.Image)(resources.GetObject("OpenPDFButton.Image")));
             this.OpenPDFButton.Name = "OpenPDFButton";
             this.OpenPDFButton.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.OpenPDFButton.Size = new System.Drawing.Size(183, 22);
+            this.OpenPDFButton.Size = new System.Drawing.Size(191, 22);
             this.OpenPDFButton.Text = "PDFを開く";
             this.OpenPDFButton.Click += new System.EventHandler(this.OpenPDFButton_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(188, 6);
             // 
             // SelectFolderButton
             // 
             this.SelectFolderButton.Name = "SelectFolderButton";
-            this.SelectFolderButton.Size = new System.Drawing.Size(183, 22);
+            this.SelectFolderButton.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.O)));
+            this.SelectFolderButton.Size = new System.Drawing.Size(191, 22);
             this.SelectFolderButton.Text = "出力先の指定";
             this.SelectFolderButton.Click += new System.EventHandler(this.SelectFolderButton_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(188, 6);
             // 
             // ExitButton
             // 
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.ExitButton.Size = new System.Drawing.Size(183, 22);
+            this.ExitButton.Size = new System.Drawing.Size(191, 22);
             this.ExitButton.Text = "終了";
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // ヘルプHToolStripMenuItem
             // 
