@@ -45,7 +45,6 @@ namespace Image_Coupling.Plugins
             }
             catch (Exception ex)
             {
-                OutputBox.Text = ex.Message;
                 MessageBox.Show(ex.Message, "Extractor", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
