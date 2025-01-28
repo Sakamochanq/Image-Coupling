@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
+using PdfiumViewer;
 
 namespace Image_Coupling.Plugins
 {
@@ -11,18 +12,40 @@ namespace Image_Coupling.Plugins
             InitializeComponent();
         }
 
-        public void Extract(string pdfPath, string outputDir)
+        public void Extract(string pdfPath, string outputDir, int dpiX, int dpiY)
         {
+            try
+            {
+                using (var document = PdfiumViewer.PdfDocument.Load(pdfPath))
+                {
+                    for (int pageIndex = 0; pageIndex < document.PageCount; pageIndex++)
+                    {
+                        using (var image = document.Render(pageIndex, dpiX, dpiY, PdfiumViewer.PdfRenderFlags.CorrectFromDpi))
+                        {
+                            string imagePath = Path.Combine(outputDir, $"Page_{pageIndex + 1}.png");
+                            image.Save(imagePath, System.Drawing.Imaging.ImageFormat.Png);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException(ex.Message);
+            }
         }
+
+        private int DPI_X = 100;
+        private int DPI_Y = 100;
 
         private void ExtractButton_Click(object sender, EventArgs e)
         {
             try
             {
-                Extract(TargetBox.Text, OutputBox.Text);
+                Extract(TargetBox.Text, OutputBox.Text, DPI_X, DPI_Y);
             }
             catch (Exception ex)
             {
+                OutputBox.Text = ex.Message;
                 MessageBox.Show(ex.Message, "Extractor", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
