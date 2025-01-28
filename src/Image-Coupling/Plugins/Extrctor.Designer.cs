@@ -221,7 +221,7 @@
             this.MinimizeBox = false;
             this.Name = "Extrctor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Extractor   |   Sakamochanq";
+            this.Text = "Extractor Beta v1.0   |   Sakamochanq";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
