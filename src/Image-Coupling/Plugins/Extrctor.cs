@@ -14,6 +14,8 @@ namespace Image_Coupling.Plugins
             this.DPISelectBox.Items.Add("100");
             this.DPISelectBox.Items.Add("300");
             this.DPISelectBox.SelectedIndex = 0;
+
+            Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "extracted");
         }
 
         public void Extract(string pdfPath, string outputDir, int dpiX, int dpiY)
@@ -84,7 +86,7 @@ namespace Image_Coupling.Plugins
         {
             if (AutoCheckBox.Checked)
             {
-                OutputBox.Text = AppDomain.CurrentDomain.BaseDirectory;
+                OutputBox.Text = AppDomain.CurrentDomain.BaseDirectory + "extracted";
                 this.SelectFolderButton.Enabled = false;
                 this.OutputBox.Enabled = false;
             }
