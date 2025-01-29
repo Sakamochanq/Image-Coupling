@@ -18,6 +18,7 @@ namespace Image_Coupling.Plugins
             this.DPISelectBox.Items.Add("100");
             this.DPISelectBox.Items.Add("300");
             this.DPISelectBox.SelectedIndex = 0;
+            this.OpenFolderButton.Enabled = false;
 
             Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "extracted");
         }
@@ -88,6 +89,18 @@ namespace Image_Coupling.Plugins
 
         private void OpenFolderButton_Click(object sender, EventArgs e)
         {
+            Process.Start("explorer.exe", OutputBox.Text);
+        }
+        private void OutputBox_TextChanged(object sender, EventArgs e)
+        {
+            if (OutputBox.Text.Length != 0)
+            {
+                this.OpenFolderButton.Enabled = true;
+            }
+            else
+            {
+                this.OpenFolderButton.Enabled = false;
+            }
         }
 
         private void AutoCheckBox_CheckedChanged(object sender, System.EventArgs e)
