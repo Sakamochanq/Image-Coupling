@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
-using PdfiumViewer;
 
 namespace Image_Coupling.Plugins
 {
@@ -22,17 +23,7 @@ namespace Image_Coupling.Plugins
         {
             try
             {
-                using (var document = PdfiumViewer.PdfDocument.Load(pdfPath))
-                {
-                    for (int pageIndex = 0; pageIndex < document.PageCount; pageIndex++)
-                    {
-                        using (var image = document.Render(pageIndex, dpiX, dpiY, PdfiumViewer.PdfRenderFlags.CorrectFromDpi))
-                        {
-                            string imagePath = Path.Combine(outputDir, $"Page_{pageIndex + 1}.png");
-                            image.Save(imagePath, System.Drawing.Imaging.ImageFormat.Png);
-                        }
-                    }
-                }
+
             }
             catch (Exception ex)
             {
