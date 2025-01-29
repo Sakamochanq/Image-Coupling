@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
+using Spire.Pdf;
+using Spire.Pdf.Graphics;
 
 namespace Image_Coupling.Plugins
 {
@@ -23,7 +26,17 @@ namespace Image_Coupling.Plugins
         {
             try
             {
+                using (var document = new PdfDocument())
+                {
+                    document.LoadFromFile(pdfPath);
+                    for (int pageIndex = 1;  pageIndex < document.Pages.Count; pageIndex++)
+                    {
+                        Image image = document.SaveAsImage(pageIndex, PdfImageType.Bitmap, dpiY, dpiX);
+                        string SavePath = string.Format($"{outputDir}\\Page_{pageIndex}.png");
+                        image.Save(SavePath, ImageFormat.Png);
 
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -71,6 +84,10 @@ namespace Image_Coupling.Plugins
                     OutputBox.Text = fbd.SelectedPath;
                 }
             }
+        }
+
+        private void OpenFolderButton_Click(object sender, EventArgs e)
+        {
         }
 
         private void AutoCheckBox_CheckedChanged(object sender, System.EventArgs e)

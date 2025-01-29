@@ -38,14 +38,15 @@
             this.ExitButton = new System.Windows.Forms.ToolStripMenuItem();
             this.ヘルプHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OpenHelpButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.画像DPIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DPISelectBox = new System.Windows.Forms.ToolStripComboBox();
             this.TargetBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.OutputBox = new System.Windows.Forms.TextBox();
             this.AutoCheckBox = new System.Windows.Forms.CheckBox();
             this.ExtractButton = new System.Windows.Forms.Button();
+            this.画像DPIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DPISelectBox = new System.Windows.Forms.ToolStripComboBox();
+            this.OpenFolderButton = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,8 +56,8 @@
             this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ファイルFToolStripMenuItem,
-            this.ヘルプHToolStripMenuItem,
-            this.画像DPIDToolStripMenuItem});
+            this.画像DPIDToolStripMenuItem,
+            this.ヘルプHToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -70,6 +71,7 @@
             this.OpenPDFButton,
             this.toolStripMenuItem2,
             this.SelectFolderButton,
+            this.OpenFolderButton,
             this.toolStripMenuItem1,
             this.ExitButton});
             this.ファイルFToolStripMenuItem.Name = "ファイルFToolStripMenuItem";
@@ -81,33 +83,33 @@
             this.OpenPDFButton.Image = ((System.Drawing.Image)(resources.GetObject("OpenPDFButton.Image")));
             this.OpenPDFButton.Name = "OpenPDFButton";
             this.OpenPDFButton.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.OpenPDFButton.Size = new System.Drawing.Size(191, 22);
+            this.OpenPDFButton.Size = new System.Drawing.Size(192, 22);
             this.OpenPDFButton.Text = "PDFを開く";
             this.OpenPDFButton.Click += new System.EventHandler(this.OpenPDFButton_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(188, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(189, 6);
             // 
             // SelectFolderButton
             // 
             this.SelectFolderButton.Name = "SelectFolderButton";
             this.SelectFolderButton.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.O)));
-            this.SelectFolderButton.Size = new System.Drawing.Size(191, 22);
+            this.SelectFolderButton.Size = new System.Drawing.Size(192, 22);
             this.SelectFolderButton.Text = "出力先の指定";
             this.SelectFolderButton.Click += new System.EventHandler(this.SelectFolderButton_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(188, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(189, 6);
             // 
             // ExitButton
             // 
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.ExitButton.Size = new System.Drawing.Size(191, 22);
+            this.ExitButton.Size = new System.Drawing.Size(192, 22);
             this.ExitButton.Text = "終了";
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
@@ -127,22 +129,6 @@
             | System.Windows.Forms.Keys.H)));
             this.OpenHelpButton.Size = new System.Drawing.Size(222, 22);
             this.OpenHelpButton.Text = "ヘルプを表示";
-            // 
-            // 画像DPIDToolStripMenuItem
-            // 
-            this.画像DPIDToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.DPISelectBox});
-            this.画像DPIDToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("画像DPIDToolStripMenuItem.Image")));
-            this.画像DPIDToolStripMenuItem.Name = "画像DPIDToolStripMenuItem";
-            this.画像DPIDToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
-            this.画像DPIDToolStripMenuItem.Text = "画像DPI（&D）";
-            // 
-            // DPISelectBox
-            // 
-            this.DPISelectBox.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.DPISelectBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DPISelectBox.Name = "DPISelectBox";
-            this.DPISelectBox.Size = new System.Drawing.Size(121, 26);
             // 
             // TargetBox
             // 
@@ -204,6 +190,30 @@
             this.ExtractButton.UseVisualStyleBackColor = true;
             this.ExtractButton.Click += new System.EventHandler(this.ExtractButton_Click);
             // 
+            // 画像DPIDToolStripMenuItem
+            // 
+            this.画像DPIDToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.DPISelectBox});
+            this.画像DPIDToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("画像DPIDToolStripMenuItem.Image")));
+            this.画像DPIDToolStripMenuItem.Name = "画像DPIDToolStripMenuItem";
+            this.画像DPIDToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.画像DPIDToolStripMenuItem.Text = "画像DPI（&D）";
+            // 
+            // DPISelectBox
+            // 
+            this.DPISelectBox.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.DPISelectBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DPISelectBox.Name = "DPISelectBox";
+            this.DPISelectBox.Size = new System.Drawing.Size(121, 26);
+            // 
+            // OpenFolderButton
+            // 
+            this.OpenFolderButton.Name = "OpenFolderButton";
+            this.OpenFolderButton.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
+            this.OpenFolderButton.Size = new System.Drawing.Size(192, 22);
+            this.OpenFolderButton.Text = "保存先を開く";
+            this.OpenFolderButton.Click += new System.EventHandler(this.OpenFolderButton_Click);
+            // 
             // Extrctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -246,6 +256,7 @@
         private System.Windows.Forms.ToolStripMenuItem SelectFolderButton;
         private System.Windows.Forms.CheckBox AutoCheckBox;
         private System.Windows.Forms.Button ExtractButton;
+        private System.Windows.Forms.ToolStripMenuItem OpenFolderButton;
         private System.Windows.Forms.ToolStripMenuItem 画像DPIDToolStripMenuItem;
         private System.Windows.Forms.ToolStripComboBox DPISelectBox;
     }
