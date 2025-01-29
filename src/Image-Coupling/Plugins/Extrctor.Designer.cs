@@ -47,7 +47,10 @@
             this.OutputBox = new System.Windows.Forms.TextBox();
             this.AutoCheckBox = new System.Windows.Forms.CheckBox();
             this.ExtractButton = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.StatusLabel = new System.Windows.Forms.ToolStripLabel();
             this.menuStrip1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -216,11 +219,30 @@
             this.ExtractButton.UseVisualStyleBackColor = true;
             this.ExtractButton.Click += new System.EventHandler(this.ExtractButton_Click);
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StatusLabel});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 220);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(505, 25);
+            this.toolStrip1.TabIndex = 8;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // StatusLabel
+            // 
+            this.StatusLabel.Name = "StatusLabel";
+            this.StatusLabel.Size = new System.Drawing.Size(44, 22);
+            this.StatusLabel.Text = "待機中";
+            // 
             // Extrctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(505, 218);
+            this.ClientSize = new System.Drawing.Size(505, 245);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.ExtractButton);
             this.Controls.Add(this.AutoCheckBox);
             this.Controls.Add(this.label2);
@@ -236,6 +258,8 @@
             this.Text = "Extractor Beta v1.0   |   Sakamochanq";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,5 +285,7 @@
         private System.Windows.Forms.ToolStripMenuItem OpenFolderButton;
         private System.Windows.Forms.ToolStripMenuItem 画像DPIDToolStripMenuItem;
         private System.Windows.Forms.ToolStripComboBox DPISelectBox;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripLabel StatusLabel;
     }
 }

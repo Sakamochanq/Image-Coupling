@@ -37,12 +37,13 @@ namespace Image_Coupling.Plugins
                         Image image = document.SaveAsImage(pageIndex, PdfImageType.Bitmap, dpiY, dpiX);
                         string SavePath = string.Format($"{outputDir}\\Page_{pageIndex}.png");
                         image.Save(SavePath, ImageFormat.Png);
-
                     }
                 }
+                StatusLabel.Text = "すべての画像抽出が完了しました。";
             }
             catch (Exception ex)
             {
+                StatusLabel.Text = "画像抽出に失敗しました。";
                 throw new InvalidOperationException(ex.Message);
             }
         }
