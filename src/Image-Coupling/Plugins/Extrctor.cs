@@ -11,6 +11,8 @@ namespace Image_Coupling.Plugins
 {
     public partial class Extrctor : Form
     {
+        private string title = "Extractor";
+
         public Extrctor()
         {
             InitializeComponent();
@@ -61,7 +63,7 @@ namespace Image_Coupling.Plugins
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Extractor", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -122,6 +124,11 @@ namespace Image_Coupling.Plugins
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void OpenHelpButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("PDFと保存先を指定後、画像出力ボタンをクリックすると\n画像が抽出されます。", title, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
     }
 }

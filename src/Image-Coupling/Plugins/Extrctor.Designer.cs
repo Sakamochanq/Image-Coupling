@@ -153,6 +153,7 @@
             | System.Windows.Forms.Keys.H)));
             this.OpenHelpButton.Size = new System.Drawing.Size(222, 22);
             this.OpenHelpButton.Text = "ヘルプを表示";
+            this.OpenHelpButton.Click += new System.EventHandler(this.OpenHelpButton_Click);
             // 
             // TargetBox
             // 
