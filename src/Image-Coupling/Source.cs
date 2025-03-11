@@ -50,7 +50,7 @@ namespace Image_Coupling
                         string SelectedFolder = fbd.SelectedPath;
 
                         //画像ファイルのみ取得
-                        string[] validExtensions = { ".png", ".jpg", ".jpeg", ".bmp", ".dds", ".emf", ".gif", ".svg", ".webp" };
+                        string[] validExtensions = { ".png", ".jpg", ".jpeg", ".bmp", ".dds", ".emf", ".gif" };
                         //ソート
                         ImageList = Directory.GetFiles(SelectedFolder, "*.*").Where(file => validExtensions.Contains(Path.GetExtension(file).ToLower())).ToArray();
                         foreach(string file in ImageList)
